@@ -26,30 +26,6 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
     });
   </script>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script src="jquery.jsonp-2.1.4.min.js"></script>
-  <script>
-    $(document).ready(function(){
-    $('#incomingdata').append('<li>Loading Sam Croft\'s tweets');
-      $.jsonp({
-      url: 'http://twitter.com/status/user_timeline/samcroft.json?count=20',
-      callbackParameter: 'callback',
-      timeout: 25000,
-      success: function(data, status) {
-      //$('#incomingdata').append('<li>The feed loads fine');
-      $('#incomingdata').empty();
-      $.each(data, function(i,item){ 
-      var tweet = item.text;
-      $('#incomingdata').append('<li>'+tweet);
-      });
-      },
-      error: function(){
-      $('#incomingdata').append('There was an error loading the feed');
-      }
-      });
-      });
-      </script>
-
   <style>
     .item {
       padding: 10px;
@@ -62,8 +38,13 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
       border-radius: 4px;
     }
     .item-title {
-      font-size: 15px;
+      font-size: 42px;
       font-weight: 500;
+    }
+    .item-title-details {
+      font-size: 42px;
+      font-weight: 500;
+      text-align: center;
     }
     .item-desc {
       font-size: 14px;
@@ -72,10 +53,20 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
       margin: 4px 0 0 0;
       padding: 0 30px 0 0;
     }
+    .item-desc-details {
+      font-size: 32px;
+      color: #000;
+      text-align: center;
+    }
     .item-label {
       font-size: 12px;
       color: #999;
       float: right;
+    }
+    .item-label-details {
+      font-size: 32px;
+      color: #000;
+      text-align: center;
     }
   </style>
 </head>
@@ -85,21 +76,21 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
   <ons-navigator>
     <ons-page>
       <ons-toolbar>
-        <div class="center">Master ** Details</div>
+        <div class="center">HSK 1 chars</div>
       </ons-toolbar>
 
       <ons-list ng-controller="MasterController">
         <ons-list-item modifier="chevron" class="item" ng-repeat="item in items" ng-click="showDetail($index)">
           <ons-row>
             <ons-col width="60px"> 
-              <div class="item-thum"></div>
+<!--              <div class="item-thum"></div> -->
             </ons-col>
             <ons-col>
               <header>
                 <span class="item-title">{{item.title}}</span>
-                <span class="item-label">{{item.label}}</span>
+<!--                <span class="item-label">{{item.label}}</span> -->
               </header>
-              <p class="item-desc">{{item.desc}}</p>
+<!--              <p class="item-desc">{{item.desc}}</p> -->
             </ons-col>
           </ons-row>                          
         </ons-list-item>
@@ -118,35 +109,59 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
       <ons-list modifier="inset" style="margin-top: 10px">
         <ons-list-item class="item">
           <ons-row>
+<!--
             <ons-col width="60px"> 
-              <div class="item-thum"></div>
+              <div class="item-thum"></div> 
             </ons-col>
             <ons-col>
               <header>
-                <span class="item-title">{{item.title}}</span>
-                <span class="item-label">{{item.label}}</span>
+                <span class="item-title-details">{{item.title}}</span>
+                <span class="item-label-details">{{item.label}}</span>
               </header>
-              <p class="item-desc">{{item.desc}}</p>
+              <p class="item-desc-details">{{item.desc}}</p>
             </ons-col>
+-->
+<!--
+                <span class="item-title-details">{{item.title}}</span><br>
+                <span class="item-label-details">{{item.label}}</span><br>
+                <span class="item-desc-details">{{item.desc}}</span>
+-->
+
+
           </ons-row>
         </ons-list-item>
 
+
+
+<!--
         <ons-list-item modifier="chevron" ng-click="doSomething()">
           <ons-icon icon="ion-chatboxes" fixed-width="true" style="color: #ccc"></ons-icon>
           Add a note
         </ons-list-item>
+
+-->
       </ons-list>
 
       <ons-list style="margin-top: 10px">
+        <ons-list-item class="item">
+          <p class="item-title-details">{{item.title}}</p>
+          <p class="item-desc-details">{{item.label}}</p>
+          <p class="item-desc-details">{{item.desc}}</p>
+        </ons-list-item>
+      </ons-list>
+
+
+
+<!--
+      <ons-list style="margin-top: 10px">
         <ons-list-item class="item" ng-repeat="i in [1,2,3]">
           <header>
-
-
             <span class="item-title"><span id="incomingdata"></span></span>
           </header>
           <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </ons-list-item>
       </ons-list>
+-->
 
       <br>
 

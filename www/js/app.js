@@ -118,7 +118,7 @@
 { title: '认识',	label: 'rènshi',	desc: 'to understand' },
 { title: '日',		label: 'rì',	desc: 'day' },
 { title: '三',		label: 'sān',	desc: '3' },
-{ title: '商店',	label: 'shāngdiàn	desc: store' },
+{ title: '商店',	label: 'shāngdiàn',	desc: 'store' },
 { title: '上',		label: 'shàng',	desc: 'on' },
 { title: '上午',	label: 'shàngwǔ',	desc: 'morning' },
 { title: '少',		label: 'shǎo',	desc: 'less' },

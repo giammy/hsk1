@@ -1,16 +1,12 @@
 <!doctype html>
 
-<!--
-http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
--->
-
 <html lang="en" ng-app="app">
 <head>
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
 
-  <title>My  App</title>  
+  <title>HSK1</title>  
   
   <link rel="stylesheet" href="lib/onsen/css/onsenui.css">  
   <link rel="stylesheet" href="styles/app.css"/>
@@ -76,25 +72,33 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
   <ons-navigator>
     <ons-page>
       <ons-toolbar>
-        <div class="center">HSK 1 chars ---
-           <a href="http://www.giammy.com/hsk">giammy.com/hsk</a></div>
+        <div class="center">HSK 1</div>
       </ons-toolbar>
 
       <ons-list ng-controller="MasterController">
         <ons-list-item modifier="chevron" class="item" ng-repeat="item in items" ng-click="showDetail($index)">
           <ons-row>
-            <ons-col width="60px"> 
-<!--              <div class="item-thum"></div> -->
+            <ons-col width="60px"> {{$index + 1}}
             </ons-col>
             <ons-col>
               <header>
                 <span class="item-title">{{item.title}}</span>
-<!--                <span class="item-label">{{item.label}}</span> -->
               </header>
-<!--              <p class="item-desc">{{item.desc}}</p> -->
             </ons-col>
           </ons-row>                          
         </ons-list-item>
+
+        <ons-list-item modifier="chevron" class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+            </ons-col>
+            <ons-col>
+                <span class="item-desc">by www.giammy.com/hsk</span>
+            </ons-col>
+          </ons-row>                          
+        </ons-list-item>
+
+
       </ons-list>
     </ons-page>
   </ons-navigator>
@@ -107,45 +111,6 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
         <div class="center">Details</div>
       </ons-toolbar>
 
-<!--
-      <ons-list modifier="inset" style="margin-top: 10px">
-        <ons-list-item class="item">
-          <ons-row>
--->
-<!--
-            <ons-col width="60px"> 
-              <div class="item-thum"></div> 
-            </ons-col>
-            <ons-col>
-              <header>
-                <span class="item-title-details">{{item.title}}</span>
-                <span class="item-label-details">{{item.label}}</span>
-              </header>
-              <p class="item-desc-details">{{item.desc}}</p>
-            </ons-col>
--->
-<!--
-                <span class="item-title-details">{{item.title}}</span><br>
-                <span class="item-label-details">{{item.label}}</span><br>
-                <span class="item-desc-details">{{item.desc}}</span>
--->
-
-<!--
-          </ons-row>
-        </ons-list-item>
--->
-
-
-<!--
-        <ons-list-item modifier="chevron" ng-click="doSomething()">
-          <ons-icon icon="ion-chatboxes" fixed-width="true" style="color: #ccc"></ons-icon>
-          Add a note
-        </ons-list-item>
-
--->
-<!--
-      </ons-list>
--->
       <ons-list style="margin-top: 10px">
         <ons-list-item class="item">
           <p class="item-title-details">{{item.title}}</p>
@@ -153,19 +118,6 @@ http://samcroft.co.uk/2010/loading-data-into-a-phonegap-app/ with jsonp
           <p class="item-desc-details">{{item.desc}}</p>
         </ons-list-item>
       </ons-list>
-
-
-
-<!--
-      <ons-list style="margin-top: 10px">
-        <ons-list-item class="item" ng-repeat="i in [1,2,3]">
-          <header>
-            <span class="item-title"><span id="incomingdata"></span></span>
-          </header>
-          <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </ons-list-item>
-      </ons-list>
--->
 
       <br>
 

@@ -91,7 +91,11 @@
       </ons-list>
 
 <ons-bottom-toolbar>
-  <div style="text-align: center; line-height: 44px"><a onclick="window.open('http://www.giammy.com/hsk', '_system');">by www.giammy.com/hsk</a></span></div>
+  <div style="text-align: center; line-height: 44px">
+<!-- <a onclick="window.open('http://www.giammy.com/hsk', '_system');">by www.giammy.com/hsk</a> -->
+by www.giammy.com/hsk
+
+</div>
 </ons-bottom-toolbar>
 
     </ons-page>
@@ -101,8 +105,11 @@
     <ons-page ng-controller="DetailController">
 
       <ons-toolbar>
-        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <!--<div class="left"><ons-back-button>Back</ons-back-button></div> -->
         <div class="center">Details</div>
+        <div class="left">
+	    <ons-button ng-click="backReset()">Back</ons-button>
+        </div>
       </ons-toolbar>
 
 

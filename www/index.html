@@ -88,19 +88,12 @@
           </ons-row>                          
         </ons-list-item>
 
-        <ons-list-item modifier="chevron" class="item">
-          <ons-row>
-            <ons-col width="60px"> 
-            </ons-col>
-            <ons-col>
-                <span class="item-desc">
-<a onclick="window.open('http://www.giammy.com/hsk', '_system');">by www.giammy.com/hsk</a></span>
-            </ons-col>
-          </ons-row>                          
-        </ons-list-item>
-
-
       </ons-list>
+
+<ons-bottom-toolbar>
+  <div style="text-align: center; line-height: 44px"><a onclick="window.open('http://www.giammy.com/hsk', '_system');">by www.giammy.com/hsk</a></span></div>
+</ons-bottom-toolbar>
+
     </ons-page>
   </ons-navigator>
 
@@ -116,25 +109,25 @@
       <ons-list style="margin-top: 10px">
 
         <ons-list-item class="item">
-	  <ons-row>
-	  <ons-col>
-	    <ons-button ng-click="showReplaceDetail(item.pidx)">Prev</ons-button>
-	  </ons-col>
-	  <ons-col>
-	    <ons-button ng-click="showReplaceRandomDetail()">Random</ons-button>
-	  </ons-col>
-	  <ons-col>
-	    <ons-button ng-click="showReplaceDetail(item.nidx)">Next</ons-button>
-	  </ons-col>
-	  </ons-row>
-        </ons-list-item>
-
-        <ons-list-item class="item">
           <p class="item-title-details">{{item.title}}</p>
           <p class="item-desc-details">{{item.label}}</p>
           <p class="item-desc-details">{{item.desc}}</p>
         </ons-list-item>
       </ons-list>
+
+<ons-bottom-toolbar>
+	  <ons-row>
+	  <ons-col width="33%">
+	    <ons-button style="width: 96%; margin-left: 2%; margin-right: 2%; text-align: center;"; ng-click="showReplaceDetail(item.pidx)">Prev</ons-button>
+	  </ons-col>
+	  <ons-col width="33%">
+	    <ons-button style="width: 96%; margin-left: 2%; margin-right: 2%; text-align: center;"; ng-click="showReplaceRandomDetail()">Random</ons-button>
+	  </ons-col>
+	  <ons-col width="33%">
+	    <ons-button style="width: 96%; margin-left: 2%; margin-right: 2%; text-align: center;"; ng-click="showReplaceDetail(item.nidx)">Next</ons-button>
+	  </ons-col>
+	  </ons-row>
+</ons-bottom-toolbar>
 
       <br>
 

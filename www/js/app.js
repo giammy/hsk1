@@ -59,7 +59,7 @@
 { idx: '3',  pidx: '2',  nidx: '4',    title: '杯子',	label: 'bēizi',	desc: 'cup' },
 { idx: '4',  pidx: '3',  nidx: '5',    title: '北京',	label: 'Běijīng',	desc: 'Beijing' },
 { idx: '5',  pidx: '4',  nidx: '6',    title: '本',	label: 'běn',	desc: '[cl.book]' },
-{ idx: '6',  pidx: '5',  nidx: '7',    title: '不客气',	label: 'búkèqi',	desc: 'you are welcome' },
+{ idx: '6',  pidx: '5',  nidx: '7',    title: '不客气',	label: 'bùkèqi',	desc: 'you are welcome' },
 { idx: '7',  pidx: '6',  nidx: '8',    title: '不',	label: 'bù',	desc: 'not' },
 { idx: '8',  pidx: '7',  nidx: '9',    title: '菜',	label: 'cài',	desc: 'vegetables' },
 { idx: '9',  pidx: '8',  nidx: '10',   title: '茶',	label: 'chá',	desc: 'tea' },
